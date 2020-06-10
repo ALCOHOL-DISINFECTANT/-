@@ -5,23 +5,23 @@ int main()
 {
 	int magic,guess,i=10;
 	srand(time(NULL));
-	magic=rand()%100+1;
-	printf("ÎÒÕâÓĞÒ»¸öÊı×Ö(1-100)£¬Äã²Â²ÂÊÇ¶àÉÙ\n");
+	magic=rand()%100+1;//äº§ç”Ÿ1-100çš„éšæœºæ•°
+	printf("æˆ‘è¿™æœ‰ä¸€ä¸ªæ•°å­—(1-100)ï¼Œä½ çŒœçŒœæ˜¯å¤šå°‘\n");
 	scanf("%d",&guess);
 	while(guess!=magic)
 	{			
 		printf("wrong!\n");
 		if(guess>magic)
-			printf("Äã²ÂµÄÊı±ÈÕıÈ·µÄ´ó¡£\n");
+			printf("ä½ çŒœçš„æ•°æ¯”æ­£ç¡®çš„å¤§ã€‚\n");
 		else
-			printf("Äã²ÂµÄÊı±ÈÕıÈ·µÄĞ¡¡£\n");
+			printf("ä½ çŒœçš„æ•°æ¯”æ­£ç¡®çš„å°ã€‚\n");
 		i--;
-		if(i==0)
+		if(i==0)//åæ¬¡çŒœé”™äº†é€€å‡ºç¨‹åº
 		{
-			printf("ÄúµÄ»ú»áÒÑÓÃÍê\n"); 
+			printf("æ‚¨çš„æœºä¼šå·²ç”¨å®Œ\n"); 
 			break;
 		}
-		printf("Äú»¹ÓĞ%d´Î»ú»á\n",i);
+		printf("æ‚¨è¿˜æœ‰%dæ¬¡æœºä¼š\n",i);
 		scanf("%d",&guess);
 		
 	}
