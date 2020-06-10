@@ -8,15 +8,15 @@ int main()
 	i=3;
 	right=0;
 	
-	while(n>0)
+	while(n>0)//答十题退出程序 
 	{
 		srand(time(NULL));
 		first=rand()%10+1;
-		second=rand()%10+1;//产生两个随机数
-		printf("%d × %d = ",first,second);
+		second=rand()%10+1;//产生两个随机数 
+		printf("%d * %d = ",first,second);
 		scanf("%d",&input);
-		num=first*second;//两数相乘
-		if(input==num)//比较答案是否正确
+		num=first*second;
+		if(input==num)
 		{
 			right++;
 			printf("Right！\n");

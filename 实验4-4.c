@@ -9,15 +9,15 @@ int main()
 	i=3;
 	right=0;
 	
-	while(n>0)
+	while(n>0)//´ğÊ®Ìâ 
 	{
 		srand(time(NULL));
 		first=rand()%10+1;
-		second=rand()%10+1;
-		choice=rand()%4+1;
-		if(choice==1)
+		second=rand()%10+1;//²úÉúÁ½¸öËæ»úÊı 
+		choice=rand()%4+1;//²úÉúÒ»¸ö1-4µÄËæ»úÊıÓÃÀ´Ëæ»ú¼Ó¼õ³Ë³ı 
+		if(choice==1)//¸ù¾İ²»Í¬µÄchoiceÑ¡Ôñ²»Í¬µÄËÄÔòÔËËã 
 		{			
-			printf("%d Ã— %d = ",first,second);
+			printf("%d * %d = ",first,second);
 			scanf("%d",&input);
 		}
 		else if(choice==2)
@@ -32,7 +32,7 @@ int main()
 		}
 		else
 		{			
-			printf("%d Ã· %d = ",first,second);
+			printf("%d / %d = ",first,second);
 			scanf("%f",&input1);
 		}
 		switch(choice)
@@ -54,14 +54,14 @@ int main()
 		if(input==num||input1==num)
 		{
 			right++;
-			printf("Rightï¼\n");
+			printf("Right£¡\n");
 		}
 		else
 			printf("Wrong!\n");	
 		
 		n--;
 	}
-	printf("\nä½ çš„å¾—åˆ†æ˜¯%d,æ­£ç¡®ç‡ä¸º%d%%",right*10,right*10);
+	printf("\nÄãµÄµÃ·ÖÊÇ%d,ÕıÈ·ÂÊÎª%d%%",right*10,right*10);
 	return 0;
 }
 

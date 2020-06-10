@@ -10,16 +10,16 @@ int main()
 	{
 		srand(time(NULL));
 		first=rand()%10+1;
-		second=rand()%10+1;//???????
-		printf("%d × %d = ",first,second);
+		second=rand()%10+1;//产生两个随机数 
+		printf("%d * %d = ",first,second);
 		scanf("%d",&input);
 		num=first*second;
 		if(input!=num)
-			while(i>1)//???????
+			while(i>1)//三次机会答题 
 			{
 				printf("Wrong! Please try again.\n");
 				scanf("%d",&input);
-				if(input==num)//?????????
+				if(input==num)//三次机会中答对跳出循环 
 					break;
 				i--;
 			}
