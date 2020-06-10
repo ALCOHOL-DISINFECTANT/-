@@ -10,7 +10,7 @@ int main()
 		srand(time(NULL));
 		first=rand()%10+1;
 		second=rand()%10+1;//???????
-		printf("%d ¡Á %d = ",first,second);
+		printf("%d * %d = ",first,second);
 		scanf("%d",&input);
 		num=first*second;//????
 		while(input!=num)//????????
@@ -18,7 +18,7 @@ int main()
 			printf("Wrong! Please try again.\n");
 			scanf("%d",&input);
 		}
-		printf("Right£¡\n");
+		printf("RightÂ£Â¡\n");
 	}
 }
 
