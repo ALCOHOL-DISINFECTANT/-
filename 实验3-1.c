@@ -5,8 +5,8 @@ int main()
 {
 	int magic,guess;
 	srand(time(NULL));
-	magic=rand()%100+1;
-	printf("ÎÒÕâÓĞÒ»¸öÊı×Ö(1~100)£¬Äã²Â²ÂÊÇ¶àÉÙ\n");
+	magic=rand()%100+1;//äº§ç”Ÿ1-100çš„éšæœºæ•°
+	printf("æˆ‘è¿™æœ‰ä¸€ä¸ªæ•°å­—(1~100)ï¼Œä½ çŒœçŒœæ˜¯å¤šå°‘\n");
 	scanf("%d",&guess);
 	if(guess==magic)
 		printf("right!\n");
@@ -14,9 +14,9 @@ int main()
 	{
 		printf("wrong!\n");
 		if(guess>magic)
-			printf("Äã²ÂµÄÊı±ÈÕıÈ·µÄ´ó¡£\n");
+			printf("ä½ çŒœçš„æ•°æ¯”æ­£ç¡®çš„å¤§ã€‚\n");
 		else
-			printf("Äã²ÂµÄÊı±ÈÕıÈ·µÄĞ¡¡£\n");
+			printf("ä½ çŒœçš„æ•°æ¯”æ­£ç¡®çš„å°ã€‚\n");
 	}
 	return 0; 
 }
