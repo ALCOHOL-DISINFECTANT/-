@@ -17,7 +17,7 @@ int main()
 		choice=rand()%4+1;
 		if(choice==1)
 		{			
-			printf("%d ¡Á %d = ",first,second);
+			printf("%d Ã— %d = ",first,second);
 			scanf("%d",&input);
 		}
 		else if(choice==2)
@@ -32,7 +32,7 @@ int main()
 		}
 		else
 		{			
-			printf("%d ¡Â %d = ",first,second);
+			printf("%d Ã· %d = ",first,second);
 			scanf("%f",&input1);
 		}
 		switch(choice)
@@ -54,14 +54,14 @@ int main()
 		if(input==num||input1==num)
 		{
 			right++;
-			printf("Right£¡\n");
+			printf("Rightï¼\n");
 		}
 		else
 			printf("Wrong!\n");	
 		
 		n--;
 	}
-	printf("\nÄãµÄµÃ·ÖÊÇ%d,ÕıÈ·ÂÊÎª%d%%",right*10,right*10);
+	printf("\nä½ çš„å¾—åˆ†æ˜¯%d,æ­£ç¡®ç‡ä¸º%d%%",right*10,right*10);
 	return 0;
 }
 
