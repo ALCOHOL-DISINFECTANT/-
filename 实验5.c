@@ -12,6 +12,8 @@ int main()
 	{	
 		judge=0;	
 		num[i]=rand()%10;//数字0-9
+		if(num[0]==0)//假如第一个数为0则再生成第一位数
+			continue;
 		for(n=0;n<i;n++)
 			if(num[n]==num[i])
 				judge=1;
