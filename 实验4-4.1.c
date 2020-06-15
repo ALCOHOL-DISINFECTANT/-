@@ -8,25 +8,25 @@ int main()
 	int right;
 	
 	right=test();
-	printf("\nÄãµÄµÃ·ÖÊÇ%d,ÕıÈ·ÂÊÎª%d%%",right*10,right*10);
+	printf("\nä½ çš„å¾—åˆ†æ˜¯%d,æ­£ç¡®ç‡ä¸º%d%%",right*10,right*10);
 	return 0;
 }
 
 int test()
 {
-	int first,second,choice,input,i,n,right;
+	int first,second,choice,input,i,n,right,change;
 	float num,input1;
 	n=10;
 	i=3;
 	right=0;
 	
-	while(n>0)//´ğÊ®Ìâ 
+	while(n>0)//ç­”åé¢˜ 
 	{
 		srand(time(NULL));
 		first=rand()%10+1;
-		second=rand()%10+1;//²úÉúÁ½¸öËæ»úÊı 
-		choice=rand()%4+1;//²úÉúÒ»¸ö1-4µÄËæ»úÊıÓÃÀ´Ëæ»ú¼Ó¼õ³Ë³ı 
-		if(choice==1)//¸ù¾İ²»Í¬µÄchoiceÑ¡Ôñ²»Í¬µÄËÄÔòÔËËã 
+		second=rand()%10+1;//äº§ç”Ÿä¸¤ä¸ªéšæœºæ•° 
+		choice=rand()%4+1;//äº§ç”Ÿä¸€ä¸ª1-4çš„éšæœºæ•°ç”¨æ¥éšæœºåŠ å‡ä¹˜é™¤ 
+		if(choice==1)//æ ¹æ®ä¸åŒçš„choiceé€‰æ‹©ä¸åŒçš„å››åˆ™è¿ç®— 
 		{			
 			printf("%d * %d = ",first,second);
 			scanf("%d",&input);
@@ -37,7 +37,13 @@ int test()
 			scanf("%d",&input);
 		}
 		else if(choice==3)
-		{			
+		{
+			if(second>first)//å¦‚æœç¬¬äºŒä¸ªæ•°æ¯”ç¬¬ä¸€ä¸ªæ•°å¤§åˆ™äº¤æ¢ 
+			{
+				change=first;//é˜²æ­¢ç»“æœä¸ºè´Ÿæ•° 
+				first=second;
+				second=first;
+			}
 			printf("%d - %d = ",first,second);
 			scanf("%d",&input);
 		}
@@ -65,7 +71,7 @@ int test()
 		if(input==num||input1==num)
 		{
 			right++;
-			printf("Right£¡\n");
+			printf("Rightï¼\n");
 		}
 		else
 			printf("Wrong!\n");	
